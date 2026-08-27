@@ -10,13 +10,13 @@ from contextlib import asynccontextmanager
 import structlog
 from fastapi import FastAPI
 
-from wallet.api.handlers import register_exception_handlers
-from wallet.api.middleware import RequestContextMiddleware
-from wallet.api.router import api_router
-from wallet.api.routers import health
-from wallet.core.config import Settings, get_settings
-from wallet.core.logging import configure_logging
-from wallet.db.pool import close_pool, create_pool
+from api.handlers import register_exception_handlers
+from api.middleware import RequestContextMiddleware
+from api.router import api_router
+from api.routers import health
+from core.config import Settings, get_settings
+from core.logging import configure_logging
+from db.pool import close_pool, create_pool
 
 logger = structlog.get_logger(__name__)
 

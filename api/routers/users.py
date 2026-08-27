@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 
-from wallet.api.schemas.users import UserResponse
-from wallet.api.wiring import CurrentUserDep
+from api.schemas.users import UserResponse
+from api.wiring import CurrentUserDep
 
 router = APIRouter(prefix="/users", tags=["users"])
 

@@ -18,14 +18,14 @@ from typing import Annotated, cast
 from fastapi import Depends, Request
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 
-from wallet.core.errors import AuthenticationError
-from wallet.db.connection import DbConnection, DbPool
-from wallet.db.pool import check_connection
-from wallet.db.repositories.user import PgUserRepository
-from wallet.models.user import User
-from wallet.ports.repositories import UserRepository
-from wallet.services.auth import AuthService
-from wallet.services.users import UserService
+from core.errors import AuthenticationError
+from db.connection import DbConnection, DbPool
+from db.pool import check_connection
+from db.repositories.user import PgUserRepository
+from models.user import User
+from ports.repositories import UserRepository
+from services.auth import AuthService
+from services.users import UserService
 
 # ----------------------------------------------------------------- conexão
 

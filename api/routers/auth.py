@@ -1,19 +1,19 @@
 """Borda HTTP de autenticação: traduz JSON <-> domínio e nada mais.
 
-Nenhum import de `wallet.db` ou `asyncpg` aqui — quem escolhe a implementação é o `api/wiring.py`.
+Nenhum import de `db/` ou `asyncpg` aqui — quem escolhe a implementação é o `api/wiring.py`.
 O `tests/test_architecture.py` falha se isso mudar.
 """
 
 from fastapi import APIRouter, status
 
-from wallet.api.schemas.auth import (
+from api.schemas.auth import (
     LoginRequest,
     RefreshRequest,
     RegisterRequest,
     TokenResponse,
 )
-from wallet.api.schemas.users import UserResponse
-from wallet.api.wiring import AuthServiceDep
+from api.schemas.users import UserResponse
+from api.wiring import AuthServiceDep
 
 router = APIRouter(prefix="/auth", tags=["auth"])
 

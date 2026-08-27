@@ -11,8 +11,8 @@ from fastapi import FastAPI, Request, status
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
 
-from wallet.api.schemas.errors import ErrorBody, ErrorResponse
-from wallet.core.errors import (
+from api.schemas.errors import ErrorBody, ErrorResponse
+from core.errors import (
     AppError,
     AuthenticationError,
     ConflictError,

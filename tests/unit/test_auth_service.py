@@ -5,11 +5,11 @@ O wiring é feito na mão, aqui mesmo: é exatamente isso que a inversão de dep
 
 import pytest
 
+from core.errors import AuthenticationError, ConflictError, DomainValidationError
+from core.security import decode_token, verify_password
+from models.user import User
+from services.auth import AuthService
 from tests.fakes.repositories import InMemoryUserRepository
-from wallet.core.errors import AuthenticationError, ConflictError, DomainValidationError
-from wallet.core.security import decode_token, verify_password
-from wallet.models.user import User
-from wallet.services.auth import AuthService
 
 SENHA = "senha-forte-123"
 
@@ -20,7 +20,7 @@ def make_service(*users: User) -> tuple[AuthService, InMemoryUserRepository]:
 
 
 def make_user(*, email: str = "ana@example.com", is_active: bool = True) -> User:
-    from wallet.core.security import hash_password
+    from core.security import hash_password
 
     user = User.new(email=email, password_hash=hash_password(SENHA), full_name="Ana Souza")
     return user if is_active else user.deactivate()

@@ -3,7 +3,7 @@
 from fastapi import APIRouter, Response, status
 from pydantic import BaseModel
 
-from wallet.api.wiring import DatabaseHealthDep
+from api.wiring import DatabaseHealthDep
 
 router = APIRouter(prefix="/health", tags=["health"])
 

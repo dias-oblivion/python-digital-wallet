@@ -7,7 +7,7 @@ a conformidade onde o fake é usado.
 from collections.abc import Iterable
 from uuid import UUID
 
-from wallet.models.user import User
+from models.user import User
 
 
 class InMemoryUserRepository:

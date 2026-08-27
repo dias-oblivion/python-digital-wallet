@@ -3,8 +3,8 @@ from uuid import uuid4
 
 import pytest
 
-from wallet.core.errors import AuthenticationError
-from wallet.core.security import (
+from core.errors import AuthenticationError
+from core.security import (
     create_access_token,
     create_refresh_token,
     create_token_pair,

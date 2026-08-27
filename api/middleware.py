@@ -12,7 +12,7 @@ from starlette.middleware.base import BaseHTTPMiddleware
 from starlette.requests import Request
 from starlette.responses import Response
 
-logger = structlog.get_logger("wallet.request")
+logger = structlog.get_logger("request")
 
 REQUEST_ID_HEADER = "X-Request-ID"
 

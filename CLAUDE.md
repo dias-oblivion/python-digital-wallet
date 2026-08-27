@@ -39,6 +39,18 @@ Pontos que não devem ser "simplificados" por engano:
 - `core/errors.py` não conhece HTTP; o mapeamento para status code fica em `api/handlers.py`.
 - Nenhum `asyncpg.Record` sai do pacote `db/` — a conversão para entidade é em `db/schemas/`.
 
+## Layout
+
+Pacotes na **raiz** (`api/`, `core/`, `db/`, `models/`, `ports/`, `services/`, `main.py`), sem
+`src/` e sem pacote guarda-chuva. O projeto **não** é instalável: `[tool.uv] package = false`.
+Os imports são absolutos a partir da raiz (`from core.config import get_settings`) e resolvem pelo
+cwd — `pythonpath` no pytest, `prepend_sys_path` no Alembic, `PYTHONPATH=/app` no Docker.
+
+Sempre subir a API com `python -m uvicorn main:app` (o `-m` põe o cwd no `sys.path`; sem ele o
+import de `main` falha, porque o projeto não está no venv).
+
+As migrations do Alembic ficam em `db/migrations/` (`script_location` no alembic.ini).
+
 ## Banco
 
 - asyncpg com **SQL nativo**, sem ORM. Não introduzir SQLAlchemy como camada de acesso a dados.

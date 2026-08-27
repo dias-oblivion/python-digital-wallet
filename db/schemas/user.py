@@ -8,7 +8,7 @@ from typing import Final
 
 import asyncpg
 
-from wallet.models.user import User
+from models.user import User
 
 TABLE: Final = "users"
 COLUMNS: Final = "id, email, password_hash, full_name, is_active, created_at, updated_at"

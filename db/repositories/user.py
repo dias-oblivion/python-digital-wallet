@@ -9,10 +9,10 @@ from uuid import UUID
 
 import asyncpg
 
-from wallet.core.errors import ConflictError
-from wallet.db.connection import DbConnection
-from wallet.db.schemas import user as schema
-from wallet.models.user import User
+from core.errors import ConflictError
+from db.connection import DbConnection
+from db.schemas import user as schema
+from models.user import User
 
 
 class PgUserRepository:

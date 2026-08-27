@@ -8,7 +8,7 @@ assinaturas batem, o contrato está satisfeito, e o mypy verifica isso em `api/w
 from typing import Protocol
 from uuid import UUID
 
-from wallet.models.user import User
+from models.user import User
 
 
 class UserRepository(Protocol):

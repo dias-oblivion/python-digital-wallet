@@ -5,16 +5,16 @@ Recebe o repositório pelo construtor e o conhece apenas pelo Protocol: em produ
 Nada de FastAPI, asyncpg ou transação aqui.
 """
 
-from wallet.core.errors import AuthenticationError, ConflictError, DomainValidationError
-from wallet.core.security import (
+from core.errors import AuthenticationError, ConflictError, DomainValidationError
+from core.security import (
     create_token_pair,
     decode_token,
     hash_password,
     verify_password,
 )
-from wallet.models.token import TokenPair
-from wallet.models.user import User
-from wallet.ports.repositories import UserRepository
+from models.token import TokenPair
+from models.user import User
+from ports.repositories import UserRepository
 
 MIN_PASSWORD_LENGTH = 12
 

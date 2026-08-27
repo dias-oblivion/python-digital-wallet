@@ -11,7 +11,7 @@ from collections.abc import Iterator
 import pytest
 import structlog
 
-from wallet.core.logging import configure_logging
+from core.logging import configure_logging
 
 
 @pytest.fixture(autouse=True)

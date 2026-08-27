@@ -17,9 +17,9 @@ import jwt
 from argon2 import PasswordHasher
 from argon2.exceptions import InvalidHashError, VerificationError, VerifyMismatchError
 
-from wallet.core.config import get_settings
-from wallet.core.errors import AuthenticationError
-from wallet.models.token import TokenClaims, TokenPair, TokenType
+from core.config import get_settings
+from core.errors import AuthenticationError
+from models.token import TokenClaims, TokenPair, TokenType
 
 
 @lru_cache

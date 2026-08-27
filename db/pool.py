@@ -6,8 +6,8 @@ Não importa FastAPI: as dependências de request (`get_conn`, `get_tx_conn`) vi
 
 import asyncpg
 
-from wallet.core.config import Settings
-from wallet.db.connection import DbPool
+from core.config import Settings
+from db.connection import DbPool
 
 
 async def create_pool(settings: Settings) -> DbPool:

@@ -31,7 +31,7 @@ test:  ## suíte completa (Testcontainers sobe um Postgres real)
 check: lint typecheck test  ## tudo que o CI roda
 
 run:  ## sobe a API local (exige Postgres em pé — use make db-up)
-	uv run uvicorn wallet.main:app --reload
+	uv run python -m uvicorn main:app --reload
 
 migrate:  ## aplica as migrations pendentes
 	uv run alembic upgrade head

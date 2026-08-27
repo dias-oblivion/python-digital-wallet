@@ -7,10 +7,10 @@ from uuid import uuid4
 
 import pytest
 
-from wallet.core.errors import ConflictError
-from wallet.db.connection import DbConnection
-from wallet.db.repositories.user import PgUserRepository
-from wallet.models.user import User
+from core.errors import ConflictError
+from db.connection import DbConnection
+from db.repositories.user import PgUserRepository
+from models.user import User
 
 
 def make_user(email: str = "ana@example.com") -> User:

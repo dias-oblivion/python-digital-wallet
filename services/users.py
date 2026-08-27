@@ -2,9 +2,9 @@
 
 from uuid import UUID
 
-from wallet.core.errors import NotFoundError
-from wallet.models.user import User
-from wallet.ports.repositories import UserRepository
+from core.errors import NotFoundError
+from models.user import User
+from ports.repositories import UserRepository
 
 
 class UserService:

@@ -3,7 +3,7 @@ from uuid import UUID
 
 from pydantic import BaseModel, EmailStr
 
-from wallet.models.user import User
+from models.user import User
 
 
 class UserResponse(BaseModel):

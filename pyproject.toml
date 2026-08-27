@@ -28,18 +28,18 @@ dev = [
     "asyncpg-stubs>=0.31.3",
 ]
 
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
-
-[tool.hatch.build.targets.wheel]
-packages = ["src/wallet"]
+# Aplicação, não biblioteca: não há wheel para construir. Sem isso, o uv tentaria instalar o
+# projeto e os pacotes de topo (api, core, db, models, ports, services) iriam para o site-packages
+# com nomes genéricos. Os imports resolvem pelo diretório de trabalho (pythonpath do pytest,
+# prepend_sys_path do alembic, PYTHONPATH no Docker).
+[tool.uv]
+package = false
 
 # ---------------------------------------------------------------- ruff
 [tool.ruff]
 line-length = 100
 target-version = "py312"
-src = ["src", "tests"]
+src = ["."]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B", "SIM", "ASYNC", "N", "RUF", "C4", "DTZ", "PT", "TID"]
@@ -47,7 +47,7 @@ select = ["E", "F", "I", "UP", "B", "SIM", "ASYNC", "N", "RUF", "C4", "DTZ", "PT
 ignore = ["B008"]
 
 [tool.ruff.lint.isort]
-known-first-party = ["wallet", "tests"]
+known-first-party = ["api", "core", "db", "models", "ports", "services", "tests"]
 
 # ---------------------------------------------------------------- mypy
 [tool.mypy]
@@ -55,9 +55,9 @@ python_version = "3.12"
 strict = true
 warn_unreachable = true
 plugins = ["pydantic.mypy"]
-files = ["src", "tests"]
-# migrations/ é gerado pelo Alembic e usa o estilo dele; fora do strict
-exclude = ["^migrations/"]
+files = ["api", "core", "db", "models", "ports", "services", "main.py", "tests"]
+# db/migrations/ é gerado pelo Alembic e segue o estilo dele; fora do strict
+exclude = ["^db/migrations/"]
 
 # ---------------------------------------------------------------- pytest
 [tool.pytest.ini_options]

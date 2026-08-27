@@ -30,19 +30,25 @@ services:
       JWT_SECRET: segredo-de-desenvolvimento-com-mais-de-32-bytes
     ports:
       - "8000:8000"
-    # bind mount + --reload: editar em src/ recarrega a API sem rebuild
+    # bind mount + --reload: editar o código recarrega a API sem rebuild
     volumes:
-      - ./src:/app/src:ro
+      - ./api:/app/api:ro
+      - ./core:/app/core:ro
+      - ./db:/app/db:ro
+      - ./models:/app/models:ro
+      - ./ports:/app/ports:ro
+      - ./services:/app/services:ro
+      - ./main.py:/app/main.py:ro
     command:
+      - python
+      - -m
       - uvicorn
-      - wallet.main:app
+      - main:app
       - --host
       - "0.0.0.0"
       - --port
       - "8000"
       - --reload
-      - --reload-dir
-      - /app/src
 
 volumes:
   pgdata:

@@ -2,10 +2,10 @@ from uuid import uuid4
 
 import pytest
 
+from core.errors import NotFoundError
+from models.user import User
+from services.users import UserService
 from tests.fakes.repositories import InMemoryUserRepository
-from wallet.core.errors import NotFoundError
-from wallet.models.user import User
-from wallet.services.users import UserService
 
 
 async def test_by_id_devolve_o_usuario() -> None:

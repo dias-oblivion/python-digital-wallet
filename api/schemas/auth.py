@@ -2,8 +2,8 @@
 
 from pydantic import BaseModel, EmailStr, Field, SecretStr
 
-from wallet.models.token import TokenPair
-from wallet.services.auth import MIN_PASSWORD_LENGTH
+from models.token import TokenPair
+from services.auth import MIN_PASSWORD_LENGTH
 
 
 class RegisterRequest(BaseModel):
