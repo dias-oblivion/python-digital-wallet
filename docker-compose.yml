@@ -1,0 +1,48 @@
+name: digital-wallet
+
+services:
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: wallet
+      POSTGRES_PASSWORD: wallet
+      POSTGRES_DB: wallet
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U wallet -d wallet"]
+      interval: 3s
+      timeout: 3s
+      retries: 10
+
+  api:
+    build: .
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      APP_ENV: local
+      LOG_LEVEL: INFO
+      # dentro da rede do compose o host é o nome do serviço
+      DATABASE_URL: postgresql://wallet:wallet@db:5432/wallet
+      JWT_SECRET: segredo-de-desenvolvimento-com-mais-de-32-bytes
+    ports:
+      - "8000:8000"
+    # bind mount + --reload: editar em src/ recarrega a API sem rebuild
+    volumes:
+      - ./src:/app/src:ro
+    command:
+      - uvicorn
+      - wallet.main:app
+      - --host
+      - "0.0.0.0"
+      - --port
+      - "8000"
+      - --reload
+      - --reload-dir
+      - /app/src
+
+volumes:
+  pgdata:

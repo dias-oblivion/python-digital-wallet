@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: instala o uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: sincroniza o ambiente
+        run: uv sync --frozen
+
+      - name: ruff
+        run: |
+          uv run ruff check .
+          uv run ruff format --check .
+
+      - name: mypy --strict
+        run: uv run mypy
+
+      # roda primeiro o que não depende de Docker: falha rápido e barato
+      - name: testes unitários
+        run: uv run pytest tests/unit tests/test_architecture.py
+
+      # o runner do GitHub já tem Docker, então os Testcontainers funcionam
+      - name: testes de integração
+        run: uv run pytest -m integration
