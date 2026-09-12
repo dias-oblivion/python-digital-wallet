@@ -20,3 +20,8 @@ htmlcov/
 # editores
 .idea/
 .vscode/
+
+# design (pencil)
+*.pen
+/assets/
+/images/

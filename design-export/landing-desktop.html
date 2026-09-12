@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      tailwind = { config: { corePlugins: { preflight: false } } };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter%3Awght%40100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *, ::before, ::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body style="background-color: #FFFFFF">
+    <div
+      data-pencil-name="Landing Page"
+      class="box-border w-[1440px] h-fit flex flex-col gap-0 justify-start items-start bg-[#FFFFFF] overflow-hidden"
+    >
+      <div
+        data-pencil-name="Hero Wrapper"
+        class="box-border w-full h-[680px] shrink-0 flex flex-col gap-0 justify-start items-start overflow-hidden"
+        style="background-image: url('data:image/webp;base64,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'); background-repeat: no-repeat; background-size: 100% 100%"
+      >
+        <div
+          data-pencil-name="Nav Bar"
+          class="box-border w-full h-fit shrink-0 flex flex-row gap-0 p-[28px_64px] justify-between items-center"
+        >
+          <div
+            data-pencil-name="Nav Left"
+            class="box-border [flex:1_1_0] h-fit flex flex-row gap-[10px] justify-start items-center"
+          >
+            <svg
+              data-pencil-name="Logo"
+              data-icon-name="asterisk"
+              data-icon-set="lucide"
+              viewBox="0 0 13.99993896484375 14"
+              preserveAspectRatio="xMidYMid meet"
+              xmlns="http://www.w3.org/2000/svg"
+              class="box-border w-[22px] shrink-0 h-[22px]"
+            >
+              <path
+                d="M6.84619 2.93945q-0.25293 0.08545-0.37939 0.30762l-0.04102 0.08545 0 1.32959q0 1.32959-0.01367 1.31592l-1.10742-0.62891q-1.11768-0.646-1.18946-0.6665-0.06836-0.02051-0.18115-0.00684-0.2085 0.01367-0.35547 0.14014-0.14697 0.12646-0.1914 0.33496-0.02734 0.15381 0.03418 0.31103 0.06494 0.15381 0.1914 0.23584 0.06836 0.05469 1.11768 0.67334l1.08008 0.61524q0.01367 0.01367-1.08692 0.65283-1.09717 0.63574-1.16894 0.7041-0.2085 0.21191-0.16065 0.50586 0.05127 0.29395 0.31446 0.42041 0.09912 0.05469 0.23925 0.05469 0.09912 0 0.14014-0.00684 0.04102-0.00684 0.11279-0.03418 0.11279-0.05811 1.16211-0.65966l1.04932-0.61524q0.01367 0 0.01367 1.32959l0 1.32959 0.04102 0.08545q0.04443 0.06836 0.12646 0.15381 0.08545 0.08203 0.16065 0.12646 0.07861 0.04102 0.24609 0.04102 0.16748 0 0.24268-0.04102 0.07861-0.04443 0.16064-0.12646 0.08545-0.08545 0.12988-0.15381l0.04102-0.08545 0-1.32959q0-1.31592 0.01367-1.32959l1.04932 0.61524q1.04932 0.60156 1.16211 0.65966 0.07178 0.02734 0.11279 0.03418 0.04102 0.00684 0.14014 0.00684 0.14014 0 0.23925-0.05469 0.26318-0.12646 0.31104-0.42041 0.05127-0.29395-0.15723-0.50586-0.07178-0.06836-1.17236-0.69726-1.09717-0.63232-1.07666-0.65284 0.02051-0.02051 1.06299-0.62207 1.0459-0.60156 1.11426-0.65966 0.16748-0.11279 0.21533-0.30762 0.05127-0.19482-0.02735-0.38281-0.07519-0.19141-0.27002-0.29053-0.08545-0.04102-0.20507-0.05469-0.11963-0.01367-0.19825 0.00684-0.0752 0.02051-1.19287 0.6665l-1.10742 0.64258q-0.01367-0.01367-0.01367-1.32959l0-1.32959-0.04102-0.08545q-0.09912-0.18115-0.28027-0.2666-0.08545-0.04102-0.22559-0.04785-0.14014-0.00684-0.18115 0.00683z"
+                fill="#12131A"
+              ></path>
+            </svg>
+            <div
+              data-pencil-name="Brand"
+              class="text-[16px]/[normal] box-border text-[#12131A] font-[Inter,system-ui,sans-serif] font-bold text-left [white-space:nowrap]"
+            >
+              Digital Wallet
+            </div>
+          </div>
+          <div
+            data-pencil-name="Nav Center"
+            class="box-border [flex:1_1_0] h-fit flex flex-row gap-[32px] justify-center items-center"
+          >
+            <div
+              data-pencil-name="Pagamentos"
+              class="text-[14px]/[normal] box-border text-[#6B7280] font-[Inter,system-ui,sans-serif] font-normal text-left [white-space:nowrap]"
+            >
+              Pagamentos
+            </div>
+            <div
+              data-pencil-name="Transferências"
+              class="text-[14px]/[normal] box-border text-[#6B7280] font-[Inter,system-ui,sans-serif] font-normal text-left [white-space:nowrap]"
+            >
+              Transferências
+            </div>
+            <div
+              data-pencil-name="Carteira"
+              class="text-[14px]/[normal] box-border text-[#6B7280] font-[Inter,system-ui,sans-serif] font-normal text-left [white-space:nowrap]"
+            >
+              Carteira
+            </div>
+            <div
+              data-pencil-name="Blog"
+              class="text-[14px]/[normal] box-border text-[#6B7280] font-[Inter,system-ui,sans-serif] font-normal text-left [white-space:nowrap]"
+            >
+              Blog
+            </div>
+          </div>
+          <div
+            data-pencil-name="Nav Right"
+            class="box-border [flex:1_1_0] h-fit flex flex-row gap-0 justify-end items-start"
+          >
+            <div
+              data-pencil-name="Sign Up Button"
+              class="box-border w-fit shrink-0 h-fit flex flex-row gap-0 p-[10px_22px] justify-start items-start bg-[#12131A] rounded-[999px]"
+            >
+              <div
+                data-pencil-name="Label"
+                class="text-[13px]/[normal] box-border text-[#FFFFFF] font-[Inter,system-ui,sans-serif] font-semibold text-left [white-space:nowrap]"
+              >
+                Criar conta
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          data-pencil-name="Hero Row"
+          class="box-border w-full h-fit shrink-0 flex flex-row gap-0 p-[40px_64px_60px_64px] justify-between items-center"
+        >
+          <div
+            data-pencil-name="Left Col"
+            class="box-border w-[520px] shrink-0 h-fit flex flex-col gap-[24px] justify-start items-start"
+          >
+            <div
+              data-pencil-name="Heading"
+              class="text-[46px]/[52px] box-border w-[480px] text-[#12131A] font-[Inter,system-ui,sans-serif] font-extrabold text-left"
+            >
+              Suas finanças totalmente conectadas
+            </div>
+            <div
+              data-pencil-name="Subheading"
+              class="text-[15px]/[23px] box-border w-[440px] text-[#6B7280] font-[Inter,system-ui,sans-serif] font-normal text-left"
+            >
+              Reúna todos os seus ativos, acompanhe gastos, gerencie recompensas e controle suas
+              finanças em um painel seguro
+            </div>
+            <div
+              data-pencil-name="Button Row"
+              class="box-border w-fit h-fit shrink-0 flex flex-row gap-[12px] justify-start items-center"
+            >
+              <div
+                data-pencil-name="Get App Button"
+                class="box-border w-fit shrink-0 h-fit flex flex-row gap-0 p-[14px_26px] justify-start items-start [background-image:linear-gradient(-93.339deg,_#7A1259_1.528%,_#D6118C_98.472%)] bg-no-repeat bg-[length:100%_100%] rounded-[999px]"
+              >
+                <div
+                  data-pencil-name="Label"
+                  class="text-[14px]/[normal] box-border text-[#FFFFFF] font-[Inter,system-ui,sans-serif] font-semibold text-left [white-space:nowrap]"
+                >
+                  Baixar o app
+                </div>
+              </div>
+              <div
+                data-pencil-name="Get Started Button"
+                class="box-border w-fit shrink-0 h-fit flex flex-row gap-0 p-[14px_26px] justify-start items-start bg-[#FFFFFF] [outline:1px_solid_#E4E4E0] [outline-offset:-0.5px] rounded-[999px]"
+              >
+                <div
+                  data-pencil-name="Label"
+                  class="text-[14px]/[normal] box-border text-[#12131A] font-[Inter,system-ui,sans-serif] font-semibold text-left [white-space:nowrap]"
+                >
+                  Começar agora
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            data-pencil-name="Right Col"
+            class="box-border w-[520px] shrink-0 h-[405px] flex flex-row gap-0 justify-center items-start relative"
+          >
+            <div
+              data-pencil-name="Phone"
+              class="box-border w-[230px] h-[405px] [transform:rotate(12deg)] [transform-origin:top_left] [box-shadow:0px_24px_48px_0px_#0000002A] absolute left-[145px] top-[50px] flex flex-row gap-0 p-[9px] justify-start items-start [background-image:linear-gradient(-150.408deg,_#2E3138_14.645%,_#0B0C10_50%,_#000000_85.355%)] bg-no-repeat bg-[length:100%_100%] [border:1px_solid_#42454D] rounded-[36px] [z-index:0]"
+            >
+              <div
+                data-pencil-name="Screen"
+                class="box-border [flex:1_1_0] h-full flex flex-col gap-0 justify-start items-start bg-[url('assets/home-screen-v2.png')] bg-no-repeat bg-cover bg-center rounded-[27px] overflow-hidden relative [z-index:0]"
+              >
+                <div
+                  data-pencil-name="Glass Reflection"
+                  class="box-border w-0 h-0 absolute left-0 top-0 flex flex-row gap-0 justify-start items-start [background-image:linear-gradient(0deg,_#FFFFFF3D_0%,_#FFFFFF00_35%)] bg-no-repeat bg-[length:100%_100%] [z-index:0]"
+                ></div>
+                <div
+                  data-pencil-name="Notch"
+                  class="box-border w-[70px] h-[20px] absolute left-[71px] top-[6px] flex flex-row gap-0 justify-start items-start bg-[#000000] rounded-[10px] [z-index:1]"
+                ></div>
+              </div>
+              <div
+                data-pencil-name="Volume Buttons"
+                class="box-border w-[3px] h-[38px] absolute left-[-2px] top-[90px] flex flex-row gap-0 justify-start items-start bg-[#1C1E24] rounded-[2px] [z-index:1]"
+              ></div>
+              <div
+                data-pencil-name="Power Button"
+                class="box-border w-[3px] h-[52px] absolute left-[229px] top-[110px] flex flex-row gap-0 justify-start items-start bg-[#1C1E24] rounded-[2px] [z-index:2]"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        data-pencil-name="Core Features"
+        class="box-border w-full h-fit shrink-0 flex flex-col gap-[48px] p-[100px_64px] justify-start items-center bg-[#FFFFFF]"
+      >
+        <div
+          data-pencil-name="Intro"
+          class="box-border w-fit h-fit shrink-0 flex flex-col gap-[14px] justify-start items-center"
+        >
+          <div
+            data-pencil-name="Heading"
+            class="text-[36px]/[normal] box-border text-[#12131A] font-[Inter,system-ui,sans-serif] font-extrabold text-center [white-space:nowrap]"
+          >
+            Principais Recursos
+          </div>
+          <div
+            data-pencil-name="Subheading"
+            class="text-[15px]/[23px] box-border w-[640px] text-[#6B7280] font-[Inter,system-ui,sans-serif] font-normal text-center"
+          >
+            Aproveite depósitos rápidos, conversões instantâneas, pagamentos globais com cartão,
+            transações seguras, recompensas por indicação e análises em tempo real
+          </div>
+        </div>
+        <div
+          data-pencil-name="Cards Row"
+          class="box-border w-full h-fit shrink-0 flex flex-row gap-[24px] justify-start items-start"
+        >
+          <div
+            data-pencil-name="Suporte Multi-Moeda"
+            class="box-border [flex:1_1_0] h-fit flex flex-col gap-[16px] p-[32px] justify-start items-start [background-image:linear-gradient(-116.165deg,_#FDF0F8_14.645%,_#F7DDEE_85.355%)] bg-no-repeat bg-[length:100%_100%] rounded-[24px]"
+          >
+            <div
+              data-pencil-name="Icon Box"
+              class="box-border w-[48px] h-[48px] shrink-0 flex flex-row gap-0 justify-center items-center bg-[#12131A] rounded-[24px]"
+            >
+              <svg
+                data-pencil-name="Icon"
+                data-icon-name="banknote"
+                data-icon-set="lucide"
+                viewBox="0 0 13.99993896484375 14"
+                preserveAspectRatio="xMidYMid meet"
+                xmlns="http://www.w3.org/2000/svg"
+                class="box-border w-[22px] shrink-0 h-[22px]"
+              >
+                <path
+                  d="M1.97559 2.95313q-0.56055 0.12646-0.93311 0.54003-0.36914 0.41357-0.44092 0.9878-0.02734 0.15381-0.02734 2.51904 0 2.36523 0.02734 2.51904 0.02734 0.30762 0.16748 0.58789 0.15381 0.32471 0.44092 0.56397 0.28711 0.23584 0.65283 0.34863l0.15381 0.05469 9.9668 0 0.15381-0.05469q0.51953-0.15723 0.86133-0.56055 0.3418-0.40674 0.3999-0.93994 0.02734-0.15381 0.02734-2.51904 0-2.36523-0.02734-2.51904-0.07178-0.57422-0.45117-0.99463-0.37598-0.42041-0.93653-0.5332-0.10938-0.02734-0.81006-0.02735l-4.21435 0-4.17334 0q-0.72803 0.01367-0.8374 0.02735z m9.78564 1.14843q0.30762 0.04102 0.43408 0.32129l0.04102 0.09912 0 4.95606-0.04102 0.09912q-0.04443 0.08203-0.11621 0.16064-0.06836 0.0752-0.14014 0.1128-0.06836 0.03418-0.17431 0.05468-0.10254 0.02051-4.76465 0.02051-4.66211 0-4.76807-0.02051-0.10254-0.02051-0.17431-0.05468-0.06836-0.0376-0.14014-0.1128-0.06836-0.07861-0.11279-0.16064l-0.04102-0.09912 0-4.95606 0.04102-0.09912q0.05811-0.12646 0.16748-0.21533 0.11279-0.09229 0.23242-0.11279 0.11963-0.02051 4.78174-0.02051 4.66211 0 4.7749 0.02734z m-5.0415 1.17578q-0.3623 0.05811-0.69385 0.2837-0.32813 0.22217-0.52295 0.52978-0.2666 0.46143-0.24609 0.97412 0.02051 0.50928 0.31445 0.93652 0.29395 0.42725 0.78613 0.62208 0.43408 0.16748 0.89551 0.10595 0.46143-0.06494 0.82373-0.35205 0.36572-0.28711 0.54688-0.71777 0.12646-0.32471 0.12646-0.65967 0-0.33496-0.12646-0.64258-0.18115-0.43408-0.54004-0.72119-0.35547-0.28711-0.8169-0.35889-0.28027-0.04102-0.54687 0z m-3.37354 1.16211q-0.25293 0.08545-0.37939 0.30762-0.04102 0.08545-0.04102 0.23926 0 0.15381 0.03418 0.23926 0.0376 0.08203 0.1333 0.18115 0.15381 0.15381 0.3999 0.16748 0.24609 0.01367 0.42041-0.16065 0.17432-0.17432 0.17432-0.41357 0-0.23926-0.16748-0.3999-0.16748-0.16064-0.39307-0.17432-0.14014 0-0.18115 0.01367z m3.90674 0.04102q0.18115 0.08545 0.2666 0.2666 0.02734 0.05811 0.04102 0.09912 0.01367 0.04102 0.01367 0.15381 0 0.11279-0.01367 0.15381-0.01367 0.04102-0.04102 0.09912-0.09912 0.18115-0.2666 0.28027-0.08545 0.04102-0.25293 0.04102-0.16748 0-0.25293-0.04102-0.16748-0.09912-0.2666-0.28027-0.02734-0.05811-0.04102-0.09912-0.01367-0.04102-0.01367-0.15381 0-0.11279 0.01367-0.15381 0.01367-0.04102 0.04102-0.09912 0.11279-0.22217 0.36572-0.30762 0.04102-0.01367 0.18115-0.00683 0.14014 0.00684 0.22559 0.04785z m3.09326-0.04102q-0.25293 0.08545-0.37939 0.30762-0.04102 0.08545-0.04102 0.23926 0 0.15381 0.03418 0.23926 0.0376 0.08203 0.1333 0.18115 0.15381 0.15381 0.3999 0.16748 0.24609 0.01367 0.42041-0.16065 0.17432-0.17432 0.17432-0.41357 0-0.23926-0.16748-0.3999-0.16748-0.16064-0.39307-0.17432-0.14014 0-0.18115 0.01367z"
+                  fill="#FFFFFF"
+                ></path>
+              </svg>
+            </div>
+            <div
+              data-pencil-name="Title"
+              class="text-[19px]/[23px] box-border w-full text-[#12131A] font-[Inter,system-ui,sans-serif] font-bold text-left"
+            >
+              Suporte Multi-Moeda
+            </div>
+            <div
+              data-pencil-name="Description"
+              class="text-[13px]/[20px] box-border w-full text-[#6B7280] font-[Inter,system-ui,sans-serif] font-normal text-left"
+            >
+              Gerencie, converta e gaste com facilidade em várias moedas, tudo em um só lugar.
+            </div>
+          </div>
+          <div
+            data-pencil-name="Cartões Virtuais e Físicos"
+            class="box-border [flex:1_1_0] h-fit flex flex-col gap-[16px] p-[32px] justify-start items-start [background-image:linear-gradient(-116.165deg,_#FDF0F8_14.645%,_#F7DDEE_85.355%)] bg-no-repeat bg-[length:100%_100%] rounded-[24px]"
+          >
+            <div
+              data-pencil-name="Icon Box"
+              class="box-border w-[48px] h-[48px] shrink-0 flex flex-row gap-0 justify-center items-center bg-[#12131A] rounded-[24px]"
+            >
+              <svg
+                data-pencil-name="Icon"
+                data-icon-name="credit-card"
+                data-icon-set="lucide"
+                viewBox="0 0 13.99993896484375 14"
+                preserveAspectRatio="xMidYMid meet"
+                xmlns="http://www.w3.org/2000/svg"
+                class="box-border w-[22px] shrink-0 h-[22px]"
+              >
+                <path
+                  d="M2.15674 2.35156q-0.29395 0.02734-0.58789 0.16748-0.29395 0.14014-0.50586 0.3794-0.30762 0.32129-0.43408 0.79638l-0.04102 0.1709 0 6.29932 0.04102 0.16748q0.07178 0.25293 0.18115 0.44092 0.11279 0.18799 0.29394 0.37256 0.18457 0.18115 0.37256 0.29394 0.18799 0.10938 0.44092 0.18115l0.16748 0.04102 9.83008 0 0.16748-0.04102q0.25293-0.07178 0.44092-0.18115 0.18799-0.11279 0.36914-0.29394 0.18457-0.18457 0.29394-0.37256 0.11279-0.18799 0.18457-0.44092l0.04102-0.16748 0-6.33008-0.04102-0.16748q-0.12646-0.46143-0.43408-0.76904-0.44775-0.48877-1.13476-0.56055-0.16748-0.01367-4.81592-0.01367-4.64844 0-4.82959 0.02734z m9.74463 1.20313q0.19482 0.09912 0.29394 0.29394l0.04102 0.09912 0.01367 1.30225-10.5 0 0.01367-1.30225 0.04102-0.09912q0.11279-0.24951 0.37939-0.32129 0.08545-0.02734 4.85694-0.02734l4.76123 0.01367 0.09912 0.04102z m0.34863 4.67578l-0.01367 1.82178-0.02735 0.08545q-0.12646 0.26318-0.37939 0.33496-0.08203 0.02734-4.82959 0.02734-4.74756 0-4.82959-0.02734-0.25293-0.07178-0.37939-0.33496l-0.02735-0.08545-0.01367-3.62647 10.5 0 0 1.80469z"
+                  fill="#FFFFFF"
+                ></path>
+              </svg>
+            </div>
+            <div
+              data-pencil-name="Title"
+              class="text-[19px]/[23px] box-border w-full text-[#12131A] font-[Inter,system-ui,sans-serif] font-bold text-left"
+            >
+              Cartões Virtuais e Físicos
+            </div>
+            <div
+              data-pencil-name="Description"
+              class="text-[13px]/[20px] box-border w-full text-[#6B7280] font-[Inter,system-ui,sans-serif] font-normal text-left"
+            >
+              Acesse cartões virtuais e físicos para gastar com flexibilidade onde quiser.
+            </div>
+          </div>
+          <div
+            data-pencil-name="Depósitos Ultra-Rápidos"
+            class="box-border [flex:1_1_0] h-fit flex flex-col gap-[16px] p-[32px] justify-start items-start [background-image:linear-gradient(-116.165deg,_#FDF0F8_14.645%,_#F7DDEE_85.355%)] bg-no-repeat bg-[length:100%_100%] rounded-[24px]"
+          >
+            <div
+              data-pencil-name="Icon Box"
+              class="box-border w-[48px] h-[48px] shrink-0 flex flex-row gap-0 justify-center items-center bg-[#12131A] rounded-[24px]"
+            >
+              <svg
+                data-pencil-name="Icon"
+                data-icon-name="zap"
+                data-icon-set="lucide"
+                viewBox="0 0 13.99993896484375 14"
+                preserveAspectRatio="xMidYMid meet"
+                xmlns="http://www.w3.org/2000/svg"
+                class="box-border w-[22px] shrink-0 h-[22px]"
+              >
+                <path
+                  d="M7.7417 0.60156q-0.16748 0.02734-0.33496 0.1128-0.09912 0.06836-2.81641 2.87109l-2.88135 2.98047q-0.35205 0.36572-0.39306 0.44775l-0.01367 0.01367q-0.09912 0.21191-0.12647 0.44776-0.04102 0.37939 0.14014 0.68701 0.18115 0.30762 0.50244 0.46143l0.04443 0.02734q0.0957 0.04443 0.19483 0.0581 0.12646 0.02734 0.51953 0.02735l3.83496 0.02734-0.57422 1.79102q-0.57422 1.79443-0.57422 1.89013-0.04102 0.25293 0.09912 0.50586 0.14014 0.25293 0.37598 0.37598 0.39307 0.18457 0.77246 0 0.12646-0.06836 0.32129-0.24951l5.59863-5.7832q0.22559-0.22559 0.30762-0.42041 0.08545-0.19482 0.08545-0.4751 0-0.32129-0.16748-0.59473-0.16748-0.27344-0.46143-0.42725l-0.04443-0.01367q-0.0957-0.05811-0.19483-0.07177-0.14014-0.02734-0.51953-0.02735l-3.84863-0.02734 0.57422-1.79102q0.57422-1.79443 0.57422-1.89013 0.04102-0.25293-0.09912-0.50586-0.14014-0.25293-0.39307-0.37598-0.24951-0.12646-0.50244-0.07178z m-0.92285 3.19239q-0.37939 1.20313-0.39307 1.32959-0.02734 0.19482 0.02051 0.3999 0.05127 0.20166 0.16064 0.36914 0.07178 0.09912 0.20508 0.21875 0.1333 0.11963 0.24268 0.17431l0.04443 0.02735q0.10938 0.05811 0.2085 0.07178 0.14014 0.01367 0.51953 0.02734l3.82129 0.01367-2.42334 2.50537q-2.41992 2.4917-2.42676 2.4917-0.00684 0 0.37598-1.20996 0.38623-1.20996 0.3999-1.33643 0.02734-0.19482-0.02393-0.39648-0.04785-0.20508-0.15722-0.35889-0.05811-0.08545-0.16407-0.19482-0.10254-0.11279-0.18798-0.15723-0.16748-0.10938-0.37598-0.16748-0.07178-0.01367-2.19775-0.02734l-2.11573 0 2.42334-2.50537q2.41992-2.4917 2.42676-2.4917 0.00684 0-0.38281 1.2168z"
+                  fill="#FFFFFF"
+                ></path>
+              </svg>
+            </div>
+            <div
+              data-pencil-name="Title"
+              class="text-[19px]/[23px] box-border w-full text-[#12131A] font-[Inter,system-ui,sans-serif] font-bold text-left"
+            >
+              Depósitos Ultra-Rápidos
+            </div>
+            <div
+              data-pencil-name="Description"
+              class="text-[13px]/[20px] box-border w-full text-[#6B7280] font-[Inter,system-ui,sans-serif] font-normal text-left"
+            >
+              Aproveite depósitos ultra-rápidos que caem na sua conta instantaneamente.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
